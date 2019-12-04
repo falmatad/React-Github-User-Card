@@ -1,9 +1,21 @@
 import React from 'react';
 import axios from 'axios';
-import styled from "styled-components";
 import UserCard from "./Components/UserCard";
 import Followers from "./Components/Followers";
 import SearchForm from "./Components/SearchForm"
+import styled from "styled-components";
+
+
+const AppContainer = styled.form`
+    display:flex;
+    flex-direction:column;
+    justify-content; center;
+
+    h1 {
+      text-align: center;
+    }
+`
+
 
 class App extends React.Component {
   state = {
@@ -68,10 +80,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>My GitHub</h1>
-          <SearchForm handleChanges={this.handleChanges} searchedName={this.state.searchedName} getOtherUser={this.getOtherUser}/>
-          <UserCard user={this.state.user}/>
-          <Followers followers={this.state.followers}/>
+          <AppContainer>
+            <h1>My GitHub</h1>
+            <SearchForm handleChanges={this.handleChanges} searchedName={this.state.searchedName} getOtherUser={this.getOtherUser}/>
+            <UserCard user={this.state.user}/>
+            <Followers followers={this.state.followers}/>
+          </AppContainer>
       </div>
     );
   }

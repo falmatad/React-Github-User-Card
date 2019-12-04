@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const UserContainer = styled.div `
     // width: auto;
-    background-color: cyan;
+    background-color: #fafbfc;
     display:flex;
     justify-content: center;
 
@@ -18,7 +18,7 @@ const UserContainer = styled.div `
         align-items: center;
         border-radius: 5px;
         box-shadow: 0 1px 6px -2px #000;
-        background-color: #FFF;
+        background-color: #f6f8fa;
         margin-bottom: 30px;
 
 

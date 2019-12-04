@@ -1,18 +1,21 @@
 import React from "react";
+import styled from "styled-components";
 
+const StyledForm = styled.form`
+    background-color: #24292e;
+    text-align: center;
+`
 const SearchForm = (props) => {
 
 return (
-    <div>
-    <form onSubmit={props.getOtherUser}>
+    <StyledForm onSubmit={props.getOtherUser}>
         <input
             type="text"
             value={props.searchedName}
             onChange={props.handleChanges}
         />
         <button>Search</button>
-    </form>
-    </div>
+    </StyledForm>
 )
 }
 
