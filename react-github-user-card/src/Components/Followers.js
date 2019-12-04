@@ -22,7 +22,9 @@ const FollowerContainer = styled.div `
         background-color: #FFF;
         margin-bottom: 30px;
 
-
+        a {
+            text-decoration: none;
+        }
         img {
             width: 200px;
             height: 200px;
@@ -39,11 +41,10 @@ return (
         {props.followers.map(follower => (
             <div className="card" key={follower.id}>
                 <img alt='github user profile' src={follower.avatar_url} />
-                <p>Login: {follower.login}</p>
-                <p>Bio: {follower.bio}</p>
+                <a href={`${follower.html_url}`}> Username: {follower.login} </a> 
                 <p>Public Repos: {follower.public_repos}</p>
-                <p>Location: {follower.location}</p>
-                <p>Profile: {follower.html_url}</p>
+                <a href={`${follower.html_url}`}>Profile: {follower.html_url} </a>
+                <p>Bio: {follower.bio}</p>
             </div>
         ))}
     </FollowerContainer>

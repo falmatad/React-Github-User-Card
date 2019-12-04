@@ -21,7 +21,17 @@ const UserContainer = styled.div `
         background-color: #f6f8fa;
         margin-bottom: 30px;
 
+        .chart {
+            width: 400px;
+            height: 100px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
+        a {
+            text-decoration: none;
+        }
         img {
             width: 200px;
             height: 200px;
@@ -36,9 +46,9 @@ return (
     <UserContainer>
         <div className="card">
             <img alt='github user profile' src={props.user.avatar_url} />
-            <p>{props.user.name}</p>
+            <a href={`${props.user.html_url}`}> {props.user.name} </a> 
             <p>Location: {props.user.location}</p>
-            <p>Profile: {props.user.html_url}</p>
+            <a href={`${props.user.html_url}`}>Profile: {props.user.html_url} </a>
             <p>Public Repos: {props.user.public_repos}</p>
             <p>Followers: {props.user.followers}</p>
             <p>Following: {props.user.following}</p>

@@ -19,6 +19,7 @@ const AppContainer = styled.form`
 
 class App extends React.Component {
   state = {
+    activity: [],
     searchedName: '',
     user: {},
     followers: []
@@ -43,6 +44,16 @@ class App extends React.Component {
           followers: res.data,
         });
         console.log(res.data)
+      })
+      .catch(err => console.log(err));
+
+      axios
+      .get(`https://github-contributions-api.now.sh/v1/falmatad`)
+      .then(res => {
+        this.setState({
+          activity: res.data.contributions,
+        });
+        console.log(res.data.contributions)
       })
       .catch(err => console.log(err));
     
@@ -81,9 +92,9 @@ class App extends React.Component {
     return (
       <div className="App">
           <AppContainer>
-            <h1>My GitHub</h1>
+            <h1>Lookup a Candidate's Github Profile</h1>
             <SearchForm handleChanges={this.handleChanges} searchedName={this.state.searchedName} getOtherUser={this.getOtherUser}/>
-            <UserCard user={this.state.user}/>
+            <UserCard user={this.state.user} activity={this.state.activity}/>
             <Followers followers={this.state.followers}/>
           </AppContainer>
       </div>

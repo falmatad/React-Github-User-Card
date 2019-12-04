@@ -11,6 +11,7 @@ return (
     <StyledForm onSubmit={props.getOtherUser}>
         <input
             type="text"
+            placeholder = "enter github username"
             value={props.searchedName}
             onChange={props.handleChanges}
         />
