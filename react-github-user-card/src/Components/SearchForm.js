@@ -1,12 +1,14 @@
 import React from "react";
 
-const SearchForm = () => {
+const SearchForm = (props) => {
 
 return (
     <div>
-    <form>
+    <form onSubmit={props.getOtherUser}>
         <input
-        type="text"
+            type="text"
+            value={props.searchedName}
+            onChange={props.handleChanges}
         />
         <button>Search</button>
     </form>

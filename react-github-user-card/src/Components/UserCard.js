@@ -39,6 +39,7 @@ return (
             <p>{props.user.name}</p>
             <p>Location: {props.user.location}</p>
             <p>Profile: {props.user.html_url}</p>
+            <p>Public Repos: {props.user.public_repos}</p>
             <p>Followers: {props.user.followers}</p>
             <p>Following: {props.user.following}</p>
             <p>Bio: {props.user.bio}</p>

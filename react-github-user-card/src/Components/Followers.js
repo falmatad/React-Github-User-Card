@@ -41,6 +41,7 @@ return (
                 <img alt='github user profile' src={follower.avatar_url} />
                 <p>Login: {follower.login}</p>
                 <p>Bio: {follower.bio}</p>
+                <p>Public Repos: {follower.public_repos}</p>
                 <p>Location: {follower.location}</p>
                 <p>Profile: {follower.html_url}</p>
             </div>
