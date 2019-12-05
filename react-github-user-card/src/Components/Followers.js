@@ -6,13 +6,9 @@ const FollowerContainer = styled.div `
     // width: auto;
     background-color: gray;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
-
-    h1 {
-        display:flex;
-        justify-content: center;
-    }
 
     .card {
         margin: 10px;
