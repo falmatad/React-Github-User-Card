@@ -6,8 +6,7 @@ const FollowerContainer = styled.div `
     // width: auto;
     background-color: gray;
     display:flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
 
     .card {
@@ -39,7 +38,6 @@ const Followers = props => {
 
 return (
     <FollowerContainer>
-            <h1>Users Followers</h1>
         {props.followers.map(follower => (
             <div className="card" key={follower.id}>
                 <img alt='github user profile' src={follower.avatar_url} />
