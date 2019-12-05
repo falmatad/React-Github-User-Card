@@ -92,7 +92,7 @@ class App extends React.Component {
     return (
       <div className="App">
           <AppContainer>
-            <h1>Lookup a Candidate's Github Profile</h1>
+            <h1>Lookup a Users Github Profile</h1>
             <SearchForm handleChanges={this.handleChanges} searchedName={this.state.searchedName} getOtherUser={this.getOtherUser}/>
             <UserCard user={this.state.user} activity={this.state.activity}/>
             <h1>Users Followers</h1>
